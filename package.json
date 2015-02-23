@@ -1,0 +1,22 @@
+{
+  "name": "gwylio",
+  "version": "0.0.1",
+  "description": "A file watcher and copier to get CopySauce out of my life",
+  "main": "gwylio.js",
+  "engines": {
+      "node": ">=0.12"
+    },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@matthewbeta",
+  "license": "MIT",
+  "dependencies": {
+    "chokidar": "^1.0.0-rc3",
+    "commander": "^2.6.0",
+    "fs-sync": "^0.2.5"
+  },
+  "bin": {
+    "gwylio": "gwylio.js"
+  }
+}
