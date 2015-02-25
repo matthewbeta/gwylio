@@ -4,9 +4,13 @@ var path      = require('path');
 
 var dirSrc    = 'src';
 var dirDest   = 'test';
+var srcFiles  = ['src/**/*.js', 'src/**/*.txt'];
+
 var log = console.log.bind(console);
 
-function gwylioCopy(filepath) {
+var gwylio = {};
+
+gwylio.copy = function(filepath) {
 
       var diff = filepath.substring(path.resolve(dirSrc).length),
           resolvedFilepath = path.resolve(dirDest + diff);
@@ -22,29 +26,23 @@ function gwylioCopy(filepath) {
 
 }
 
-// copy everything
-fs.copy(dirSrc, dirDest, function(err) {
-  if (err) return console.error(err)
-  console.log("copied everything!")
-}) //copies file)
+gwylio.init = function() {
+  // copy everything
+  fs.copy(dirSrc, dirDest, function(err) {
+    if (err) return console.error(err)
+    console.log("copied everything!")
+  }) //copies file)
+}
 
 
-gaze(['src/**/*.js', 'src/**/*.txt'], function() {
+gaze(srcFiles, function() {
 
   console.log('Now watching: ', this.relative())
 
   this.on('changed', function(filepath) {
-    gwylioCopy(filepath);
-  });
-
-  this.on('added', function(filepath) {
-    console.log(filepath + ' was added');
-    gwylioCopy(filepath);
-  });
-
-  this.on('deleted', function(filepath) {
-    console.log(filepath + ' was deleted');
-    gwylioRemove(filepath);
+    gwylio.copy(filepath);
   });
 
 });
+
+module.exports = gwylio;
