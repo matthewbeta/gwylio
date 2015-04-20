@@ -19,6 +19,6 @@
     "gaze": "^0.5.1"
   },
   "bin": {
-    "gwylio": "gwylio.js"
+    "gwylio": "cmd.js"
   }
 }
