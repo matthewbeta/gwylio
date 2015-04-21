@@ -12,10 +12,9 @@
   "author": "@matthewbeta",
   "license": "MIT",
   "dependencies": {
-    "chokidar": "^1.0.0-rc3",
+    "chalk": "^1.0.0",
     "commander": "^2.6.0",
     "fs-extra": "^0.16.3",
-    "fs-sync": "^0.2.5",
     "gaze": "^0.5.1"
   },
   "bin": {
