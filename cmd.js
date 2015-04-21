@@ -14,8 +14,6 @@ program
   //.option('-i, --ignore [list]', 'Comma seperated list of file types to ignore (html). This takes presidence over the watch list')
   .parse(process.argv);
 
-  console.lo
-
 if (!program.src || !program.files) return console.error(chalk.red.bold('⊂(✖_✖)つ D\'oh! Tell me what to watch dummy'));
 if (!program.dest) return console.error(chalk.red.bold('⊂(✖_✖)つ D\'oh! Tell me where to copy changes to'));
 
