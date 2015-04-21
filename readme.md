@@ -1,6 +1,6 @@
 # :see_no_evil: Gwylio
 
-⊂(ↁ_ↁ)つ  Watch files for changes and copy them somewhere else
+(ↁ_ↁ)  Watch files for changes and copy them somewhere else
 
 ## Installation
 
